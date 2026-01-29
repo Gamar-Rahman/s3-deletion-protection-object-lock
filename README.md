@@ -36,6 +36,30 @@ Amazon S3 Object Lock prevents objects from being:
 
 for a fixed retention period or indefinitely (WORM – Write Once Read Many).
 
+
+# Configure Amazon S3 Object Lock (1 Day Retention)
+
+## Steps
+
+1. Upload an object to the S3 bucket
+2. Select the object → Actions → Edit retention
+3. Enable retention
+4. Choose:
+   - Retention mode: Governance
+   - Retention period: 1 Day
+5. Save changes
+
+---
+
+## Validation
+
+Attempt to:
+- Delete object ❌
+- Overwrite object ❌
+
+You should receive an **Access Denied** error.
+
+
 #### Object Lock Modes:
 - **Retention Period** – Locks objects for a defined time
 - **Legal Hold** – Locks objects indefinitely until removed
