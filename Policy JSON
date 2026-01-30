@@ -1,0 +1,30 @@
+{
+  "Version": "2012-10-17",
+  "Id": "Policy1632212279867",
+  "Statement": [
+    {
+      "Sid": "Stmt1632212277477",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:DeleteBucket",
+      "Resource": "arn:aws:s3:::your-bucket-name"
+    }
+  ]
+}			
+
+
+
+
+{
+  "Version": "2012-10-17",
+  "Id": "Policy1632226089805",
+  "Statement": [
+    {
+      "Sid": "Stmt1632226087622",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:DeleteObject",
+      "Resource": "arn:aws:s3:::your-bucket-name/*"
+    }
+  ]
+}			
